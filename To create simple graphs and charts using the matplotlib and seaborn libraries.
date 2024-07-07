@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+# Пример данных
+data = {
+    'Category': ['A', 'B', 'C', 'D'],
+    'Values': [10, 20, 15, 25]
+}
+
+# Создание DataFrame
+df = pd.DataFrame(data)
+
+# Настройка стиля Seaborn
+sns.set(style="whitegrid")
+
+# Создание столбчатой диаграммы
+plt.figure(figsize=(8, 6))
+sns.barplot(x='Category', y='Values', data=df, palette='viridis')
+plt.title('Bar Plot Example')
+plt.xlabel('Category')
+plt.ylabel('Values')
+plt.show()
